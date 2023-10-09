@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "WyQBL9U859X4YoF8EULATCdbSAlpBsq57IFRJbUaNVU=",
+  "Source": "ShopList",
+  "BasePath": "_content/ShopList",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ShopList/wwwroot",
+      "Source": "ShopList",
+      "ContentRoot": "/home/futupas/projects/ShopList/wwwroot/",
+      "BasePath": "_content/ShopList",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/futupas/projects/ShopList/wwwroot/index.html",
+      "SourceId": "ShopList",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/futupas/projects/ShopList/wwwroot/",
+      "BasePath": "_content/ShopList",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/home/futupas/projects/ShopList/wwwroot/page2/index.html",
+      "SourceId": "ShopList",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/futupas/projects/ShopList/wwwroot/",
+      "BasePath": "_content/ShopList",
+      "RelativePath": "page2/index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/page2/index.html"
+    }
+  ]
+}

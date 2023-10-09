@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "/home/futupas/projects/ShopList/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/home/futupas/projects/ShopList/wwwroot/page2/index.html",
+      "PackagePath": "staticwebassets/page2/index.html"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.ShopList.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.ShopList.props",
+      "PackagePath": "build\\ShopList.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.ShopList.props",
+      "PackagePath": "buildMultiTargeting\\ShopList.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.ShopList.props",
+      "PackagePath": "buildTransitive\\ShopList.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
