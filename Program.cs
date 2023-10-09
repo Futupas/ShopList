@@ -2,6 +2,8 @@ using System.Text;
 using dotenv.net;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ShopList;
@@ -15,6 +17,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<JwtService>();
 
 // Add Swagger
 builder.Services.AddSwaggerGen(c =>
@@ -69,6 +74,23 @@ builder.Services.AddAuthentication(options =>
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    // dbContext.Database.Migrate();
+    dbContext.Database.EnsureCreated();
+    try
+    {
+        var databaseCreator = (dbContext.Database.GetService<IDatabaseCreator>() as RelationalDatabaseCreator);
+        databaseCreator.CreateTables();
+    }
+    catch (Exception ex)
+    {
+        //todo something here
+    }
+}
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -84,3 +106,4 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.Run();
+

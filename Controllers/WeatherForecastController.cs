@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ShopList.Controllers;
@@ -28,5 +29,13 @@ public class WeatherForecastController : ControllerBase
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         })
         .ToArray();
+    }
+    
+    [HttpGet("userinfo")]
+    [Authorize]
+    public IActionResult GetUserInfo()
+    {
+        var userName = User?.Identity?.Name;
+        return Ok($"Hello, {userName}!");
     }
 }
